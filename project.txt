@@ -1,0 +1,13 @@
+1. Creating directory structures.
+2. creating npm project
+3. installing all dependencies
+
+              dependencies
+        -------------------------
+        -> express
+        -> ejs
+        -> express-ejs-layouts
+        -> nodemon (dev dependencies)
+
+4. creating express server. ( server.js file )
+5. creating home page with html and css and rendering it to the browser.
