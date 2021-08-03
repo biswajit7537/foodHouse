@@ -11,3 +11,8 @@
 
 4. creating express server. ( server.js file )
 5. creating home page with html and css and rendering it to the browser.
+6. git setup
+7. first git commit
+
+8. install and setup Laravel mix
+9. install tellwind CSS
