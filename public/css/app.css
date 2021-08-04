@@ -19,10 +19,19 @@ nav li a {
 }
 nav li a:hover {
   color: #FE5F1E;
+  border-bottom: 2px solid #ccc;
 }
 
 section.hero {
   background: #F8F8F8;
+}
+
+.order-btn {
+  background: #FE5F1E;
+  transition: all 0.3s ease-in-out;
+}
+.order-btn:hover {
+  background: #b23301;
 }
 
 .add-to-cart {
@@ -34,4 +43,26 @@ section.hero {
   background: #FE5F1E;
   border-color: #fff;
   color: #fff;
+}
+
+section.cart {
+  background: #F8F8F8;
+}
+section.cart .amount {
+  color: #FE5F1E;
+}
+
+.cart-icon {
+  color: #FE5F1E;
+}
+
+section.login {
+  background: #F8F8F8;
+}
+section.login a {
+  color: #FE5F1E;
+  cursor: pointer;
+}
+section.login a:hover {
+  color: #b23301;
 }

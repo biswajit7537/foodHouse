@@ -20,10 +20,18 @@ nav li a{
     transition: $smooth;
     &:hover{
         color: $primary;
+        border-bottom: 2px solid $gray;
     }
 }
 section.hero {
     background: $secondary;
+}
+.order-btn{
+    background: $primary;
+    transition: $smooth;
+    &:hover{
+        background: $primary-hover;
+    }
 }
 .add-to-cart{
     border: 2px solid $primary;
@@ -34,4 +42,24 @@ section.hero {
         border-color: $pure;
         color: $pure;
     }
+}
+section.cart{
+    background: $secondary;
+    .amount{
+        color: $primary;
+    }
+}
+.cart-icon{
+    color: $primary;
+}
+section.login{
+
+   background: $secondary;
+   a{
+       color: $primary;
+       cursor: pointer;
+       &:hover{
+           color: $primary-hover;
+       }
+   }
 }
