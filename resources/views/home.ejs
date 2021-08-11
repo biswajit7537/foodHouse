@@ -12,121 +12,32 @@
 </section>
 <section class="menu container mx-auto px-20 py-8">
     <h1 class="text-xl fint-bold mb-8">All Items</h1>
-    
     <div class="grid grid-cols-4 gap-16">
-        <div>
-            <img class="h-40 mb-4 mx-auto rounded-xl" src="/img/dosa.png" alt="dosa">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg">Masala Dosa</h2>
-                <div class="flex items-center justify-around">
-                    <span class="font-bold text-lg">₹ 75</span>
-                    <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+        <% allItems.forEach((item)=>{ %>
 
-        <div>
-            <img class="h-40 mb-4 mx-auto rounded-xl" src="/img/dosa.png" alt="dosa">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg">Masala Dosa</h2>
-                <div class="flex items-center justify-around">
-                    <span class="font-bold text-lg">₹ 75</span>
-                    <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
 
-        <div>
-            <img class="h-40 mb-4 mx-auto rounded-xl" src="/img/dosa.png" alt="dosa">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg">Masala Dosa</h2>
-                <div class="flex items-center justify-around">
-                    <span class="font-bold text-lg">₹ 75</span>
-                    <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
+            <div>
+                <img class="h-40 mb-4 mx-auto rounded-xl" src="/img/<%=item.image%>" alt="dosa">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg"><%= item.name %></h2>
+                    <div class="flex items-center justify-around">
+                        <span class="font-bold text-lg">₹ <%= item.price %></span>
+                        <button data-food="<%= JSON.stringify(item)%>" class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>+</span>
+                            <span class="ml-4">Add</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div>
-            <img class="h-40 mb-4 mx-auto rounded-xl" src="/img/dosa.png" alt="dosa">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg">Masala Dosa</h2>
-                <div class="flex items-center justify-around">
-                    <span class="font-bold text-lg">₹ 75</span>
-                    <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+            <% }) %>
+    </div>
 
-        <div>
-            <img class="h-40 mb-4 mx-auto rounded-xl" src="/img/dosa.png" alt="dosa">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg">Masala Dosa</h2>
-                <div class="flex items-center justify-around">
-                    <span class="font-bold text-lg">₹ 75</span>
-                    <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
 
-        <div>
-            <img class="h-40 mb-4 mx-auto rounded-xl" src="/img/dosa.png" alt="dosa">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg">Masala Dosa</h2>
-                <div class="flex items-center justify-around">
-                    <span class="font-bold text-lg">₹ 75</span>
-                    <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <div>
-            <img class="h-40 mb-4 mx-auto rounded-xl" src="/img/dosa.png" alt="dosa">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg">Masala Dosa</h2>
-                <div class="flex items-center justify-around">
-                    <span class="font-bold text-lg">₹ 75</span>
-                    <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
 
-        <div>
-            <img class="h-40 mb-4 mx-auto rounded-xl" src="/img/dosa.png" alt="dosa">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg">Masala Dosa</h2>
-                <div class="flex items-center justify-around">
-                    <span class="font-bold text-lg">₹ 75</span>
-                    <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+
 
     </div>
-    
-    
+
+
 </section>

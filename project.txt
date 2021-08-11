@@ -15,4 +15,11 @@
 7. first git commit
 
 8. install and setup Laravel mix
-9. install tellwind CSS
+9. install tailwind CSS
+10. move all routs to rout file.
+11. make controllers
+12. install connect-mongo to save our cookies id in database
+13. rendering add items to cookies storage.
+14. install axios library
+15. setup cart quantity in cart icon dynamically
+16. install noty library for displaying message
