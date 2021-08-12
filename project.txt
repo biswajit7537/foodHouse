@@ -22,4 +22,7 @@
 13. rendering add items to cookies storage.
 14. install axios library
 15. setup cart quantity in cart icon dynamically
-16. install noty library for displaying message
+16. install noty library for displaying added item message
+17. registration of user
+18. install bcrypt library for hashing the password
+19. install passport and passport-local library

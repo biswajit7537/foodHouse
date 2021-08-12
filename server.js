@@ -9,6 +9,7 @@ const session = require("express-session")
 const PORT = process.env.PORT || 3000
 const flash = require("express-flash")
 const MongoStore = require("connect-mongo")
+const passport = require("passport")
 
 // mongodb connection
 
@@ -21,6 +22,8 @@ connection.once('open', () => {
 }).catch(err => {
     console.log("connection failed...");
 });
+
+
 
 // session store
 let store = new MongoStore({
@@ -38,17 +41,24 @@ app.use(session({
    // cookie: { maxAge: 1000 * 10 },
 }))
 
+// passport config
+const passportInit = require("./app/config/passport");
+passportInit(passport);
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 app.use(flash());
 // assets
 app.use(express.static('public'));
 
+app.use(express.urlencoded());  // for getting data from forms.
 app.use(express.json());
 
 // global middleware
 app.use((req,res,next)=>{
     res.locals.session = req.session;
+    res.locals.user = req.user;
     next()
 })
 // set template engine
