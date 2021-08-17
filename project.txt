@@ -26,3 +26,9 @@
 17. registration of user
 18. install bcrypt library for hashing the password
 19. install passport and passport-local library
+20. store order details in to database
+21. create order page and display order details
+22. install moment library. moment library is used for formatting the date and time 
+23. create order controller
+24. create order page for customer and admin
+25. place order functionality

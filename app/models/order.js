@@ -12,7 +12,7 @@ const orderSchema = new Schema({
         type : Object,
         required : true
     },
-    Phone : {
+    phone : {
         type : String,
         required : true
     },
@@ -29,6 +29,6 @@ const orderSchema = new Schema({
         default : "order_placed"
     }
 
-})
+},{timestamps : true})
 
 module.exports = mongoose.model("Order",orderSchema);
