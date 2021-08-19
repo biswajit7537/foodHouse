@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 3000
 const flash = require("express-flash")
 const MongoStore = require("connect-mongo")
 const passport = require("passport")
+const Emitter = require("events") 
 
 // mongodb connection
 
@@ -30,6 +31,8 @@ let store = new MongoStore({
     mongoUrl: url,
     collection: "sessions"
 })
+
+
 // session config
 
 app.use(session({
@@ -40,6 +43,11 @@ app.use(session({
     cookie: { maxAge: 1000 * 60 * 60 * 24 }, // 24 hours
    // cookie: { maxAge: 1000 * 10 },
 }))
+
+// event emmiter
+const eventEmitter = new Emitter()
+app.set("eventEmitter",eventEmitter);
+
 
 // passport config
 const passportInit = require("./app/config/passport");
@@ -69,6 +77,25 @@ app.set('view engine', 'ejs');
 
 require("./routes/web")(app);
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log(`server started on the port ${PORT}`);
 });
+
+
+// web socket 
+
+const io = require("socket.io")(server);
+io.on("connection",(socket)=>{
+    // join 
+    socket.on("join",(orderId)=>{
+       socket.join(orderId)
+    })
+})
+
+eventEmitter.on("orderUpdated",(data)=>{
+    io.to(`order_${data.id}`).emit("orderUpdated",data)
+})
+
+eventEmitter.on("orderPlaced",(data)=>{
+    io.to("adminRoom").emit("orderPlaced",data);
+})

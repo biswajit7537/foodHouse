@@ -32,3 +32,6 @@
 23. create order controller
 24. create order page for customer and admin
 25. place order functionality
+26. change order status by admin functionality
+27. status tracker setup
+28. integration of web socket (socket.io)
