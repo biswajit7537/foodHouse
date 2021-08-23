@@ -279,25 +279,101 @@
 body {
   font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
+  background: #edeae1;
   color: #232323;
 }
 
-nav li:last-child a {
+.logo {
+  color: #FF6666;
+}
+
+.cart-1 {
+  margin-right: 100px;
+  list-style-type: none;
+  border-radius: 30px;
   background: #FF6666;
   color: #fff;
   transition: all 0.3s ease-in-out;
 }
-nav li:last-child a:hover {
+.cart-1:hover {
   background: #B9345A;
   color: #fff;
 }
 
-nav li a {
+.icon {
+  color: #fff;
+}
+
+.cartCounter {
+  color: #fff;
+}
+
+.logo-box {
+  margin-left: 90px;
+  margin-right: 30px;
+}
+
+.a-text {
+  text-decoration: none;
+}
+
+.logo-img {
+  margin-left: 30px;
+}
+
+.logo-name {
+  color: #FF6666;
+  font-weight: bolder;
+}
+
+.nav-elements {
   transition: all 0.3s ease-in-out;
 }
-nav li a:hover {
+.nav-elements:hover {
   color: #FF6666;
-  border-bottom: 2px solid #ccc;
+}
+
+.healthy-text {
+  color: #FF6666;
+  font-size: 30px;
+}
+
+.order {
+  overflow-x: auto;
+}
+
+.item-card {
+  padding: 20px;
+}
+.item-card:hover {
+  background: #edeae1;
+  border-radius: 20px;
+  box-shadow: 2px 4px #ccc;
+}
+
+a {
+  text-decoration: none;
+}
+
+.orderId-clickable:hover {
+  color: #B9345A;
+}
+
+.border {
+  border-radius: 10px;
+}
+
+.register-btn {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.status {
+  overflow-x: hidden;
+}
+
+.check-status-text {
+  color: blue;
 }
 
 section.hero {
@@ -306,6 +382,7 @@ section.hero {
 }
 
 .order-btn {
+  text-decoration: none;
   background: #FF6666;
   transition: all 0.3s ease-in-out;
 }
@@ -344,6 +421,17 @@ section.login a {
 }
 section.login a:hover {
   color: #B9345A;
+}
+
+.login-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 5px #ccc;
+}
+.login-box:hover {
+  box-shadow: 3px 6px #FF6666;
 }
 
 a.link {
@@ -454,4 +542,41 @@ section.status {
   float: right;
   font-size: 15px;
   color: #B9345A;
+}
+
+footer {
+  margin-bottom: 0;
+}
+
+.copy-write {
+  background: #FF6666;
+  color: #fff;
+  padding-bottom: 40px;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+.foot-text {
+  text-align: center;
+  padding-top: 50px;
+  color: #a1a1a1;
+}
+
+@media (max-width: 1060px) {
+  .container {
+    max-width: 90%;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 768px) {
+  .status-box ul li span:before {
+    font-size: 34px;
+  }
 }

@@ -1,5 +1,28 @@
 <section class="login flex justify-center bg-gray-100 pt-10 pb-20">
-  <form action="/register" method="POST">
+  <div class="login-box">
+    <form action="/login", method="POST">
+      <% if(messages.error){%>
+        <span class="text-red-500 text-sm"><%= messages.error%></span>
+        <% } %>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Name</label>
+          <input name="name" type="text" value="<%= messages.name %>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
+        </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email</label>
+        <input name="email" type="text" value="<%= messages.email %>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+      </div>
+      <button type="submit" class="w-1/4 mt-6 text-indigo-50 font-bold py-2 rounded-full transition duration-300 order-btn register-btn">Register</button>
+            <a href="/login" class="text-sm text-gray-700 inline-block mt-4 ml-6 transition duration-200">Already Have Account ? Go to Login </a>
+    </form>
+  </div>
+
+  <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++==-->
+ <!-- <form action="/register" method="POST">
     <div class="max-h-screen flex items-center">
       
         <div class="container mx-auto max-w-md shadow-md hover:shadow-lg transition duration-300">
@@ -27,5 +50,6 @@
         </div>
        
     </div>
-  </form>
+  </form> -->
 </section>
+<p class="foot-text"> © Biswajit Mishra <br>All right resereved @ Food House</p>

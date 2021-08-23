@@ -24,7 +24,7 @@
                 <% if(orders.length){%>
                     <% orders.forEach((order)=>{ %>
                         <tr>
-                            <td class="border px-4 py-2"><a class="link" href="/customer/orders/<%= order._id %>"><%= order._id %></a></td>
+                            <td class="border px-4 py-2"><a class="link orderId-clickable" href="/customer/orders/<%= order._id %>"><p class="check-status-text">Check your order Status here </p> <%= order._id %></a></td>
                             <td class="border px-4 py-2"><%= order.address %></td>
                             <td class="border px-4 py-2"><%= order.phone %></td>
                             <td class="border px-4 py-2"><%= moment(order.createdAt).format('hh:mm A') %></td>
@@ -43,3 +43,4 @@
     </div>
 
 </section>
+<p class="foot-text"> © Biswajit Mishra <br>All right resereved @ Food House</p>

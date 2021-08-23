@@ -1,8 +1,8 @@
-<section class="cart py-16">
+<section class="cart py-16 sm:w-full">
 
     <% if(session.cart){ %>
 
-        <div class="order container mx-auto w-1/2">
+        <div class="order container md:mx-auto xl:w-1/3 sm:w-full">
             <div class="flex items-center border-b border-gray-300 pb-4">
 
                 <i class="fas fa-cart-arrow-down cart-icon"></i>
@@ -15,17 +15,17 @@
             <div>
 
                 <% for(let foods of Object.values(session.cart.items) ){ %>
-                    <div class="flex items-center my-8">
-                        <img class="w-24 rounded-xl" src="/img/<%= foods.item.image %>" alt="item">
+                    <div class="flex items-center my-8 sm:w-full">
+                        <img class="w-24 rounded-lg" src="/img/<%= foods.item.image %>" alt="item">
                         <div class="flex-1 ml-4">
-                            <h1>
+                            <h1 class="text-sm md:text-lg">
                                 <%= foods.item.name %>
                             </h1>
                         </div>
                         <span class="flex-1">
                             <%= foods.qty %> plate
                         </span>
-                        <span class="font-bold text-lg">₹ <%= foods.item.price * foods.qty %></span>
+                        <span class="font-bold text-sm md:text-lg">₹ <%= foods.item.price * foods.qty %></span>
                     </div>
                     <%}%>
 
@@ -39,10 +39,10 @@
                 </div>
                 <% if(user){ %>
                 <div>
-                    <form class="mt-12" action="/orders" method="POST">
-                        <input name="phoneNumber" class="border border-gray-400 p-1 w-1/2 mb-4" type="text"
+                    <form class="mt-12" action="/orders" method="POST" id="payment-form">
+                        <input name="phoneNumber" class="border p-2 w-1/2 mb-4" type="text"
                             placeholder="Enter Phone Number">
-                        <input name="address" class="border border-gray-400 p-3 w-1/2" type="text" placeholder="Enter Your Address">
+                        <input name="address" class="border p-3 w-1/2" type="text" placeholder="Enter Your Address">
                         <div>
                           <button type="submit" class="px-6 py-2 rounded-full font-bold text-white mt-4 order-btn">Place order</button>
                         </div>
@@ -75,3 +75,4 @@
             </div>
             <% } %>
 </section>
+<p class="foot-text"> © Biswajit Mishra <br>All right resereved @ Food House</p>

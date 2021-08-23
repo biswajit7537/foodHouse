@@ -47,6 +47,7 @@ function orderController() {
       const orders = await Order.find({ customerId: req.user._id }, null, { sort: { 'createdAt': -1 } })  // -1 is for sorting in decending order
 
       res.header('Cache-Control', 'no-cache,private,no-store,must-revalidate,max-stale=0, post-check=0,pre-check=0')
+    
       res.render("customers/orders", { orders: orders, moment: moment });
 
     },

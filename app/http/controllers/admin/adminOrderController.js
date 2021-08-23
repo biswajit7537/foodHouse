@@ -1,6 +1,6 @@
 
 const order = require("../../../models/order")
-const Order = require("../../../models/order")
+
 
 function adminOrderController(){
     return {
