@@ -13,8 +13,7 @@ const passport = require("passport")
 const Emitter = require("events") 
 
 // mongodb connection
-
-const url = 'mongodb://localhost/foodHouse';
+const url = process.env.MONGO_CONNECTION_URL; 
 mongoose.connect(url, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true, useFindAndModify: true });
 const connection = mongoose.connection;
 
@@ -76,6 +75,10 @@ app.set('views', path.join(__dirname, '/resources/views'));
 app.set('view engine', 'ejs');
 
 require("./routes/web")(app);
+
+app.use((req,res)=>{
+    res.status(404).render("errors/404");
+})
 
 const server = app.listen(PORT, () => {
     console.log(`server started on the port ${PORT}`);

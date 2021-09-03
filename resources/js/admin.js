@@ -93,7 +93,7 @@ export function initAdmin(socket) {
         new Noty({
 
             type: "information",
-            timeout: 1000,
+            timeout: 2000,
             progressBar: false,
             layout: "topLeft", // 1 second
             text: "You have a new Order !"

@@ -38,13 +38,23 @@
                     <span class="amount text-2xl font-bold ml-2"> ₹ <%= session.cart.totalPrice %></span>
                 </div>
                 <% if(user){ %>
-                <div>
+                <div class="border p-12 mt-5 w-full md:w-1/2 ml-auto">
                     <form class="mt-12" action="/orders" method="POST" id="payment-form">
-                        <input name="phoneNumber" class="border p-2 w-1/2 mb-4" type="text"
+
+                        <select id="paymentType" name="paymentType" class="border p-2 w-full md:w-2/3 mb-4 pr-5">
+                            <option value="cod">Cash on delivery</option>
+                            <option value="card">Card Payment</option>
+                        
+                        </select>
+
+                        <input name="phoneNumber" class="border p-2 w-full md:w-2/3 mb-4" type="text"
                             placeholder="Enter Phone Number">
-                        <input name="address" class="border p-3 w-1/2" type="text" placeholder="Enter Your Address">
+                        <input name="address" class="border p-3 w-full md:w-2/3 mb-4" type="text" placeholder="Enter Your Address">
+    
+                        <div id="card-element" class= "w-full md:w-2/3 mb-4"></div>
                         <div>
-                          <button type="submit" class="px-6 py-2 rounded-full font-bold text-white mt-4 order-btn">Place order</button>
+                            
+                          <button type="submit" class="px-6 py-2 rounded-full font-bold text-white mt-4 order-btn shadow">Place order</button>
                         </div>
 
                     </form>
@@ -75,4 +85,4 @@
             </div>
             <% } %>
 </section>
-<p class="foot-text"> © Biswajit Mishra <br>All right resereved @ Food House</p>
+<p class="foot-text"> © Biswajit Mishra <br>© Food House All right resereved</p>

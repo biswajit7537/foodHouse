@@ -2,6 +2,7 @@ import axios from "axios";
 import Noty from "noty";
 import {initAdmin} from './admin';
 import moment from "moment";
+import {initStripe} from "./stripe";
 
 let addToCart = document.querySelectorAll('.add-to-cart');
 let cartCounter = document.querySelector('.cartCounter');
@@ -86,6 +87,9 @@ function updateStatus(order){
 
 updateStatus(order);
 
+
+initStripe();
+
 // using socket in client side
 
 let socket = io();
@@ -111,7 +115,7 @@ socket.on("orderUpdated",(data)=>{
     new Noty({
 
         type: "information",
-        timeout: 1000,
+        timeout: 2000,
         progressBar: false,
         layout: "topRight", // 1 second
         text: "Your Status Updated !!"

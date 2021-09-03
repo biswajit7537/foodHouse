@@ -18,12 +18,12 @@
 </section>
 
 <section class="menu container mx-auto px-20 py-8">
-    <h1 class="text-xl fint-bold mb-8"><i class="fas fa-chevron-circle-down"></i><a name="allItems">All Items</a></h1>
+    <h1 class="text-xl fint-bold mb-8"><i class="fas fa-chevron-circle-down"></i><a name="allItems"> &nbsp All Items</a></h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-16">
         <% allItems.forEach((item)=>{ %>
 
 
-            <div class="w-full md:w-64 item-card">
+            <div class="w-full md:w-64 item-card shadow">
                 <img class="h-40 mb-4 mx-auto rounded-xl" src="/img/<%=item.image%>" alt="dosa">
                 <div class="text-center">
                     <h2 class="mb-4 text-lg"><%= item.name %></h2>
@@ -48,7 +48,7 @@
                 d="M0,0L30,42.7C60,85,120,171,180,192C240,213,300,171,360,160C420,149,480,171,540,165.3C600,160,660,128,720,133.3C780,139,840,181,900,202.7C960,224,1020,224,1080,197.3C1140,171,1200,117,1260,112C1320,107,1380,149,1410,170.7L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z">
             </path>
         </svg>
-        <p class="copy-write"> © Biswajit Mishra <br>All right resereved @ Food House</p>
+        <p class="copy-write"> © Biswajit Mishra <br>© Food House All right resereved</p>
     </div>
 </footer>
 
