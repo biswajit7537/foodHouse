@@ -87,7 +87,8 @@ function authController() {
                 password: hashedPassword
             })
             user.save().then((user) => {
-                return res.redirect("/");
+                req.flash("success", "You have successfully registered. Login now to continue..");
+                return res.redirect("/login");
 
             }).catch(err => {
                 req.flash("error", "Something Went Wrong");
