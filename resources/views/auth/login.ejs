@@ -1,5 +1,6 @@
 <section class="login flex justify-center bg-gray-100 pt-10">
   <div class="login-box">
+    <h4 class="login-text">Login</h4>
     <img class="h-20 mx-auto" src="/img/user-logo.jpg" alt="">
     <form action="/login" , method="POST">
       <% if(messages.error){%>
@@ -8,14 +9,22 @@
         </span>
         <% } %>
           <div class="form-group">
-            <label for="exampleInputEmail1">Username</label>
-            <input type="text" name="email" value="<%= messages.email %>" class="form-control" id="exampleInputEmail1"
-              aria-describedby="emailHelp" placeholder="Enter Username">
+            <i class="fas fa-envelope" style="color: #FF6666;"></i>
+            <label for="exampleInputEmail1" class="px-2">Username</label>
+            <input type="text" name="email" value="<%= messages.email %>" class="form-control formInput"
+              id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username" autocomplete="off">
           </div><br>
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" name="password" class="form-control" id="exampleInputPassword1"
-              placeholder="Enter Password">
+            <i class="fas fa-key" style="color: #FF6666;"></i>
+            <label for="exampleInputPassword1" class="px-2">Password</label>
+            <div class="password-box formInput">
+              <input type="password" name="password" class="eye-icon myInput" id="exampleInputPassword1"
+                placeholder="Enter Password">
+            
+                <i class="fas fa-eye-slash eye" id="hide" onclick="myFunction()" style="color: #FF6666;"></i>
+                <i class="fas fa-eye eye" id="show" onclick="myFunction()" style="color: #FF6666;"></i>
+              
+            </div>
           </div>
           <button type="submit"
             class="w-1/4 mt-6 text-indigo-50 font-bold py-2 rounded-full transition duration-300 order-btn">Login</button>
@@ -25,3 +34,19 @@
   </div>
 </section>
 <p class="foot-text"> © Biswajit Mishra <br>© Food House All right resereved</p>
+<script type="text/javascript">
+    function myFunction(){
+      var x = document.getElementById("exampleInputPassword1");
+      if(x.type === "password"){
+        x.type = "text"
+        document.getElementById("hide").style.display = "none";
+        document.getElementById("show").style.display = "inline-block";
+
+      }else{
+        x.type = "password";
+        document.getElementById("hide").style.display = "inline-block";
+        document.getElementById("show").style.display = "none";
+      }
+    }
+
+</script>
